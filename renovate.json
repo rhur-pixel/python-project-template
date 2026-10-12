@@ -5,7 +5,9 @@
     {
       "customType": "regex",
       "description": "Track shared-pipelines pipelineRef revision",
-      "fileMatch": ["^\\.tekton/.*\\.ya?ml$"],
+      "managerFilePatterns": [
+        "/^\\.tekton/.*\\.ya?ml$/"
+      ],
       "matchStrings": [
         "github\\.com/app-sre/shared-pipelines(?:\\.git)?[\\s\\S]{0,200}?name: revision\\s+value: (?<currentDigest>[0-9a-f]{40})",
         "github\\.com/app-sre/shared-pipelines(?:\\.git)?[\\s\\S]{0,200}?name: revision\\s+value: (?<currentValue>main)"
