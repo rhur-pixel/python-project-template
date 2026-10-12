@@ -17,9 +17,12 @@
   ],
   "packageRules": [
     {
-      "description": "Test only: keep the PR open for inspection",
+      "description": "Test only: isolate pipeline pins, keep the PR open for inspection",
       "matchDepNames": ["https://github.com/app-sre/shared-pipelines"],
-      "automerge": false
+      "automerge": false,
+      "pinDigests": true,
+      "groupName": "shared-pipelines-pin",
+      "groupSlug": "shared-pipelines-pin"
     }
   ]
 }
